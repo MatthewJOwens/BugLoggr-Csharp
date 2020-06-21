@@ -121,6 +121,13 @@ Delete
 - A Bug can be edited
 - Cannot edit a Bug after it is closed
 
+#### Must contain (per Joel Test):
+- section for complete steps to reproduce the bug
+- section for expected behavior
+- section for observed (buggy) behavior
+- section for who it’s assigned to
+- section for whether it has been fixed or not
+
 #### Challenges
 
 - Implement user auth
