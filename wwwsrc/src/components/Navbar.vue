@@ -1,6 +1,8 @@
 <template>
+  <!-- TODO style navbar, esp. login/logout button -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <router-link class="navbar-brand" :to="{ name: 'Home' }">
+      <!-- TODO get font awesome icons working -->
       <i class="fas fa-virus"></i>BugLoggr
     </router-link>
     <button
