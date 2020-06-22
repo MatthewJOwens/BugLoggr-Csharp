@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
+import Navbar from "./components/navbar.vue";
 import { onAuth } from "@bcwdev/auth0-vue";
 export default {
   name: "App",

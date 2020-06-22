@@ -28,6 +28,13 @@
         >
           <router-link class="nav-link" :to="{ name: 'Profile' }">Profile</router-link>
         </li>
+        <li
+          class="nav-item"
+          :class="{ active: $route.name == 'MainPage'}"
+          v-if="$auth.isAuthenticated"
+        >
+          <router-link class="nav-link" :to="{ name: 'MainPage'}">MainPage</router-link>
+        </li>
       </ul>
       <span class="navbar-text">
         <button class="btn btn-success" @click="login" v-if="!$auth.isAuthenticated">Login</button>
@@ -41,7 +48,7 @@
 import axios from "axios";
 import { getUserData } from "@bcwdev/auth0-vue";
 export default {
-  name: "Navbar",
+  name: "navbar",
   methods: {
     async login() {
       await this.$auth.loginWithPopup();
@@ -50,6 +57,7 @@ export default {
       console.log(this.$auth.user);
       this.$store.dispatch("getProfile");
       // this.$store.dispatch("getBugs");
+      this.$router.push({ name: "MainPage" });
     },
     async logout() {
       this.$store.dispatch("resetBearer");

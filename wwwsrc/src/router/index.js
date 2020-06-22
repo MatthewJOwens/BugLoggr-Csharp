@@ -23,6 +23,15 @@ const routes = [
       // @ts-ignore
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
+  },
+  {
+    path: '/mainpage',
+    name: 'MainPage',
+    component: function () {
+      // @ts-ignore
+      return import(/* webpackChunkName: "main-page" */ '../views/MainPage.vue')
+    },
+    beforeEnter: authGuard
   }
 ]
 
